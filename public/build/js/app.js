@@ -118,14 +118,14 @@ new Vue({
                 {
                     type:"button",
                     //header:"<div class='md:flex md:items-center mb-6'>\n",
-                    startdiv:"\t<div class='w-full md:w-"+this.size+" px-3 mb-6'>\n",
+                    startdiv:"\t\t\t<div class='w-full md:w-"+this.size+" px-3 mb-6'>\n",
                     label:"",
                     //enddiv
                     //startdiv2:"\t<div class='md:w-4/6'>\n",
-                    input:"\t\t<button class='appearance-none block w-full bg-gray-400 text-gray-700 font-bold uppercase border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='button-" + this.inputId + "'>button</button>\n\t",
+                    input:"\t\t\t\t<button class='appearance-none block w-full bg-gray-400 text-gray-700 font-bold uppercase border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='button-" + this.inputId + "'>"+this.labelName+"</button>\n",
                     //enddiv
                     //enddiv--header
-                    enddiv:"</div>\n"
+                    enddiv:"\t\t\t</div>\n"
                 },
             ];
             return inputs;

@@ -79,11 +79,11 @@
                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                 </div>
             </div>
-            <span class="px-4 py-2 bg-red-900 rounded text-white font-bold cursor-pointer" @click="removeItem()">Del</span>
+            <span class="px-4 py-2 bg-red-900 rounded text-white font-bold cursor-pointer" @click="removeItem()" onmouseout="recolor()">Del</span>
         </div>
         
         <br><br>
-
+        
     <div class="flex justify-center">
         <pre class="w-10/12 rounded-lg overflow-hidden"><code id="codeColor" class="html" v-text="ShowTotal"></code></pre>
     </div>
