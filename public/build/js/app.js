@@ -94,19 +94,19 @@ new Vue({
                 {
                     type:"textarea",
                     //header:"<div class='md:flex md:items-center mb-6'>\n",
-                    startdiv:"\t<div class='w-full md:w-"+this.size+" px-3 mb-6'>\n",
-                    label:"\t\t<label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' for='grid-text-area-" + this.inputId + "'>" + this.labelName + "</label>\n\t",
+                    startdiv:"\t\t\t<div class='w-full md:w-"+this.size+" px-3 mb-6'>\n",
+                    label:"\t\t\t\t<label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' for='grid-text-area-" + this.inputId + "'>" + this.labelName + "</label>\n",
                     //enddiv
-                    startdiv2:"\t<div class='md:w-4/6'>\n",
-                    input:"\t\t<textarea class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-text-area-"+this.inputId+"' placeholder='Enter "+this.labelName+"'></textarea>\n\t",
+                    //startdiv2:"\t<div class='md:w-4/6'>\n",
+                    input:"\t\t\t\t<textarea class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-text-area-"+this.inputId+"' placeholder='Enter "+this.labelName+"'></textarea>\n",
                     //enddiv
                     //enddiv--header
-                    enddiv:"</div>\n"
+                    enddiv:"\t\t\t</div>\n"
                 },
                 {
                     type:"space",
                     //header:"<div class='md:flex md:items-center mb-6'>\n",
-                    startdiv:"\t<div class='hidden md:block md:w-"+this.size+"  px-3 mb-6'>\n",
+                    startdiv:"\t\t\t<div class='hidden md:block md:w-"+this.size+"  px-3 mb-6'>",
                     label:"",
                     //enddiv
                     //startdiv2:"\t<div class='md:w-4/6'>\n",
