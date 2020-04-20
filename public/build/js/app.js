@@ -29,6 +29,7 @@ new Vue({
             
             this.show.items.push({
                 id: this.inputId,
+                type:this.type,
                 name: this.labelName,
                 text:showdiv
             });
@@ -44,7 +45,7 @@ new Vue({
                     label:"\t\t\t\t<label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' for='grid-text-" + this.inputId + "'>" + this.labelName + "</label>\n",
                     //enddiv
                     //startdiv2:"\t<div class='md:w-4/6'>\n",
-                    input:"\t\t\t\t<input class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-text-" + this.inputId + "' type='text' placeholder='Enter " + this.labelName + "'>\n",
+                    input:"\t\t\t\t<input class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-text-" + this.inputId + "' type='text' placeholder='Enter " + this.labelName + "'  required>\n",
                     //enddiv
                     //enddiv--header
                     enddiv:"\t\t\t</div>\n"
@@ -56,7 +57,19 @@ new Vue({
                     label:"\t\t\t\t<label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' for='grid-Password-" + this.inputId + "'>" + this.labelName + "</label>\n",
                     //enddiv
                     //startdiv2:"\t<div class='md:w-4/6'>\n",
-                    input:"\t\t\t\t<input class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-password-"+this.inputId+"' type='password' placeholder='*******'>\n",
+                    input:"\t\t\t\t<input class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-password-"+this.inputId+"' type='password' placeholder='*******'  required>\n",
+                    //enddiv
+                    //enddiv--header
+                    enddiv:"\t\t\t</div>\n"
+                },
+                {
+                    type:"Email",
+                    //header:"<div class='md:flex md:items-center mb-6'>\n",
+                    startdiv:"\t\t\t<div class='w-full md:w-"+this.size+" px-3 mb-6'>\n",
+                    label:"\t\t\t\t<label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' for='grid-Password-" + this.inputId + "'>" + this.labelName + "</label>\n",
+                    //enddiv
+                    //startdiv2:"\t<div class='md:w-4/6'>\n",
+                    input:"\t\t\t\t<input class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-email-"+this.inputId+"' type='email' placeholder='Enter " + this.labelName + "'  required>\n",
                     //enddiv
                     //enddiv--header
                     enddiv:"\t\t\t</div>\n"
@@ -68,7 +81,7 @@ new Vue({
                     label:"\t\t\t\t<label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' for='grid-number-" + this.inputId + "'>" + this.labelName + "</label>\n",
                     //enddiv
                     //startdiv2:"\t<div class='md:w-4/6'>\n",
-                    input:"\t\t\t\t<input class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-number-"+this.inputId+"' type='number' placeholder='Enter "+this.labelName+"'>\n",
+                    input:"\t\t\t\t<input class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-number-"+this.inputId+"' type='number' placeholder='Enter "+this.labelName+"'  required>\n",
                     //enddiv
                     //enddiv--header
                     enddiv:"\t\t\t</div>\n"
@@ -81,7 +94,7 @@ new Vue({
                     //enddiv
                     //startdiv2:"\t<div class='md:w-4/6'>\n",
                     input:"\t\t\t\t<div class='relative'>"+
-                    "\n\t\t\t\t\t<select class='block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-select-"+this.inputId+"'>"+
+                    "\n\t\t\t\t\t<select class='block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-select-"+this.inputId+"' required>"+
                     "\n\t\t\t\t\t\t<option>1</option>\n\t\t\t\t\t\t<option>2</option>\n\t\t\t\t\t\t<option>3</option>\n\t\t\t\t\t</select>"+
                     "\n\t\t\t\t\t<div class='pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700'>"+
                     "\n\t\t\t\t\t\t<svg class='fill-current h-4 w-4' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'>"+
@@ -98,7 +111,7 @@ new Vue({
                     label:"\t\t\t\t<label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' for='grid-text-area-" + this.inputId + "'>" + this.labelName + "</label>\n",
                     //enddiv
                     //startdiv2:"\t<div class='md:w-4/6'>\n",
-                    input:"\t\t\t\t<textarea class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-text-area-"+this.inputId+"' placeholder='Enter "+this.labelName+"'></textarea>\n",
+                    input:"\t\t\t\t<textarea class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='grid-text-area-"+this.inputId+"' placeholder='Enter "+this.labelName+"' required></textarea>\n",
                     //enddiv
                     //enddiv--header
                     enddiv:"\t\t\t</div>\n"
@@ -123,6 +136,18 @@ new Vue({
                     //enddiv
                     //startdiv2:"\t<div class='md:w-4/6'>\n",
                     input:"\t\t\t\t<button class='appearance-none block w-full bg-gray-400 text-gray-700 font-bold uppercase border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' id='button-" + this.inputId + "'>"+this.labelName+"</button>\n",
+                    //enddiv
+                    //enddiv--header
+                    enddiv:"\t\t\t</div>\n"
+                },
+                {
+                    type:"submit",
+                    //header:"<div class='md:flex md:items-center mb-6'>\n",
+                    startdiv:"\t\t\t<div class='w-full md:w-"+this.size+" px-3 mb-6'>\n",
+                    label:"",
+                    //enddiv
+                    //startdiv2:"\t<div class='md:w-4/6'>\n",
+                    input:"\t\t\t\t<input type='submit' class='appearance-none block w-full bg-gray-400 text-gray-700 font-bold uppercase border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-center cursor-pointer' id='submit-" + this.inputId + "' value='"+this.labelName +"'>\n",
                     //enddiv
                     //enddiv--header
                     enddiv:"\t\t\t</div>\n"
